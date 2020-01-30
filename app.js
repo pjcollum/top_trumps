@@ -1,25 +1,62 @@
-let arrayOne = [182, 186, 190, 200, 201, 202]
-let arrayTwo = [160, 120, 100, 210, 228, 226]
+// class TopTrumps{
+//     constructor(name, attack){
+//         this._name = name;
+//         this._attack = attack;
+//     }
+//     get name 
+// }
+let playerOne = [2, 19, 20, 22, 33, 55]
+let playerTwo = [3, 57, 1, 5, 4, 7]
 let turn
+// const cardDeck
 
-for (let turn = 0; turn < arrayOne.length; turn++) {
-    if (arrayOne[0] < arrayTwo[0]) {
-        console.log("Array Two won");
-        arrayOne.shift([0])
-        arrayTwo.push(arrayOne[0])
-        console.log(arrayOne);
-        console.log(arrayTwo);
+// const cardDeck(attack) => {
+//     "Man City" = 90;
+//     "Everton" = 60;
+//     "Watford" = 40;
+//     "Burnley" = 20;
+// }
+const playGame = () => {
+    for (let turn = 0; turn < playerOne.length; turn++) {
+        if (playerOne[0] < playerTwo[0]) {
+            console.log(`Player Two won round ${turn}`);
+            playerTwo.push(playerOne[0])        //push index from player one to end of player 2 index
+            playerTwo.push()
+            playerOne.shift()           //removes first index
+            console.log(playerOne);
+            console.log(playerTwo);
+        }
+        else {
+            console.log(`Player one won round ${turn}`);
+            playerOne.push(playerTwo[0])    //push index from player two to end of player one index
+            playerOne.push()
+            playerTwo.shift()               //removes first index
+            console.log(playerOne);
+            console.log(playerTwo);
+        }
+
+        // console.log(`Player One score: ${playerOne.length}`);
+        // console.log(`Player Two score: ${playerTwo.length}`);
     }
-    else {
-        console.log("Array one won");
-        arrayTwo.shift([0])
-        arrayOne.push(arrayTwo[0])
-        console.log(arrayOne);
-        console.log(arrayTwo);
+    if (playerOne.length == 0){
+        console.log("Player Two wins");
+        return true
+        
+    }else if(playerTwo.length == 0){
+        console.log("Player One wins");
+        return true
+    } else{
+        return false
     }
-    
-console.log(`Player One score: ${arrayOne.length}`);
-console.log(`Player Two score: ${arrayTwo.length}`);
+}
+
+while(true){
+let gameEnded = playGame();
+
+if (gameEnded){
+    break   //stops loop running
 }
 
 
+
+}
