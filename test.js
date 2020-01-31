@@ -1,9 +1,41 @@
-let array1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+class TopTrumps {
+    constructor(name, attack) {
+        this._name = name;
+        this._attack = attack;
+    }
+    get name() {
+        return this._name;
+    }
+    get attack() {
+        return this._attack
+    }
+}
+
+const deck1 = [
+    ManUtd = new TopTrumps("Manchester United", 80),
+    Newcastle = new TopTrumps("Newcastle", 55),
+    Norwich = new TopTrumps("Norwich", 10)
+]
+const deck2 = [
+    Everton = new TopTrumps("Everton", 65),
+    Watford = new TopTrumps("Watford", 40),
+    Burnley = new TopTrumps("Burnley", 30),
+]
+
+// console.log(deck1);
+// console.log(deck2);
 
 
-// array1(Math.random())
-// console.log(array1);
-
-
-let playRandom = Math.floor(Math.random() * 10)
-console.log(array1(playRandom))
+if (deck1[0].attack < deck2[0].attack) {
+    const holdingPile = deck1.shift()
+    console.log(`Deck 1 length: ${deck1.length}`)
+    console.log(`Deck 2 length: ${deck2.length}`)
+    deck2.push(holdingPile)
+    console.log(`Deck 2 length: ${deck2.length}`);
+}
+else if (deck2[0].attack < deck1[0].attack){
+    const holdingPile = deck2.shift()
+    deck1.push(holdimngPile);
+    console.log(`Deck 1 length: ${deck1.length}`)
+    console.log(`Deck 2 length: ${deck2.length}`)
+}

@@ -7,7 +7,7 @@ class TopTrumps {
     constructor(name, attack, defence) {
         this._name = name;
         this._attack = attack;
-        this._defence = defence;
+        
     }
     get name() {
         return this._name;
@@ -15,31 +15,29 @@ class TopTrumps {
     get attack() {
         return this._attack;
     }
-    get defence(){
-        return this._defence;
-    }
+    
 }
 
 const deck1 = [
-    ManUtd = new TopTrumps("Manchester United", 9, 12),
-    Newcastle = new TopTrumps("Newcastle", 38, 34),
-    Norwich = new TopTrumps("Norwich", 7, 45),
-    Arsenal = new TopTrumps("Arsenal", 80, 88),
-    PSG = new TopTrumps("PSG", 67, 99)
+    ManUtd = new TopTrumps("Manchester United", 9),
+    Newcastle = new TopTrumps("Newcastle", 38),
+    Norwich = new TopTrumps("Norwich", 7),
+    Arsenal = new TopTrumps("Arsenal", 80),
+    PSG = new TopTrumps("PSG", 67)
 
 ]
 const deck2 = [
-    Everton = new TopTrumps("Everton", 15, 33),
-    Watford = new TopTrumps("Watford", 69, 23),
-    Burnley = new TopTrumps("Burnley", 93, 66),
-    Barcelona = new TopTrumps("Barcelona", 46, 89),
-    RealMadrid = new TopTrumps("Real Madrid", 77, 50)
+    Everton = new TopTrumps("Everton", 15),
+    Watford = new TopTrumps("Watford", 69),
+    Burnley = new TopTrumps("Burnley", 93),
+    Barcelona = new TopTrumps("Barcelona", 46),
+    RealMadrid = new TopTrumps("Real Madrid", 77)
 ]
 
 
 const playGame = (counter) => {
 
-    if (deck1[0].attack < deck2[0].attack) {
+    if (deck1[0].attack < deck2[0].attack) {        //attack loop
         console.log(`Player Two won round ${counter}`);
 
         //move losing card to back of winners deck
