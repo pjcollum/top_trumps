@@ -39,7 +39,7 @@ const deck2 = [
 
 const playGame = (counter) => {
 
-    if (deck1[0].attack < deck2[0].attack) {
+    if (deck1[0].attack < deck2[0].attack) {        //attack loop
         console.log(`Player Two won round ${counter}`);
 
         //move losing card to back of winners deck

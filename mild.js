@@ -1,13 +1,8 @@
 
-// let deck1 = [200, 190, 200, 220, 330, 550]
-// let deck2 = [3, 67, 1, 5, 44, 7]
-
-
 class TopTrumps {
     constructor(name, attack, defence) {
         this._name = name;
         this._attack = attack;
-        
     }
     get name() {
         return this._name;

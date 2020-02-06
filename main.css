@@ -1,0 +1,26 @@
+.div1 {  
+    display:block;
+    float: right;
+    margin: auto;
+    width: 45%;
+    height: 60%;
+    border: 10px solid #73AD21;
+    border-style: solid
+    padding: 10px;
+  
+      text-indent: 30px;
+      text-align: center;
+    }
+.div2{  
+    display:block;
+    float: left;
+    margin: auto;
+    width: 50%;
+    height: 0%;
+    border: 10px solid #73AD21;
+    border-style: solid
+    padding: 10px;
+  
+      text-indent: 30px;
+      text-align: center;
+    }
